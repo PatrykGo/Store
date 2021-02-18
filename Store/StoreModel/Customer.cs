@@ -7,25 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Store
+namespace Store.StoreModel
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Product()
+        public Customer()
         {
             this.Purchases = new HashSet<Purchase>();
         }
     
-        public int Product_Id { get; set; }
-        public string name { get; set; }
-        public int Category_Id { get; set; }
-        public double price { get; set; }
+        public int Customer_Id { get; set; }
+        public string firstName { get; set; }
+        public string surName { get; set; }
     
-        public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Purchase> Purchases { get; set; }
     }

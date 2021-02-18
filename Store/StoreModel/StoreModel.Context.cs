@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Store
+namespace Store.StoreModel
 {
     using System;
     using System.Data.Entity;
