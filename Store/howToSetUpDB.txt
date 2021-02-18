@@ -1,0 +1,63 @@
+tworzenie bazy danych do projektu:
+
+otwórz widok -> SQL Server Object Explorer
+
+rozwiń SQL Server, nastepnie LocalDB i najedź na folder Database
+
+kliknij prawym przyciskiem myszki na folder i wybierz add new database
+
+nazwij baze StoreDB i utwórz baze danych
+
+nastepnie rozwiń folder database (jeżeli sam się nie rozwinął) i najedź na naszą baze danych StoreDB
+
+kliknij prawym przyciskiem myszki i wybierz new query na stępnie przekopiuj ponirzszy tekst:
+
+
+
+
+
+CREATE TABLE [dbo].[Category] (
+    [Category_Id] INT            IDENTITY (1, 1) NOT NULL,
+    [name]        NVARCHAR (MAX) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Category_Id] ASC)
+);
+
+CREATE TABLE [dbo].[Product] (
+    [Product_Id]  INT            IDENTITY (1, 1) NOT NULL,
+    [name]        NVARCHAR (MAX) NOT NULL,
+    [Category_Id] INT            NOT NULL,
+    [price]       FLOAT (53)     NOT NULL,
+    PRIMARY KEY CLUSTERED ([Product_Id] ASC),
+    CONSTRAINT [FK_Product_Category] FOREIGN KEY ([Category_Id]) REFERENCES [dbo].[Category] ([Category_Id])
+);
+
+CREATE TABLE [dbo].[Customer] (
+    [Customer_Id] INT            IDENTITY (1, 1) NOT NULL,
+    [firstName]        NVARCHAR (MAX) NOT NULL,
+    [surName]    NVARCHAR (MAX) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Customer_Id] ASC)
+);
+
+CREATE TABLE [dbo].[Purchase] (
+    [Purchase_Id] INT      IDENTITY (1, 1) NOT NULL,
+    [Product_Id]  INT      NOT NULL,
+    [Customer_Id] INT      NOT NULL,
+    [data]        DATETIME NOT NULL,
+    PRIMARY KEY CLUSTERED ([Purchase_Id] ASC),
+    CONSTRAINT [FK_Purchase_Customer] FOREIGN KEY ([Customer_Id]) REFERENCES [dbo].[Customer] ([Customer_Id]),
+    CONSTRAINT [FK_Purchase_Product] FOREIGN KEY ([Product_Id]) REFERENCES [dbo].[Product] ([Product_Id])
+);
+
+GO
+
+
+
+
+
+następnie w górnym lewym rogu uruchom execute (zielony trójkąt)
+
+zostało już tylko dodanie wartości w tabeli Customer i Category
+
+aby to zrobić otwórz folder tables i najedź na wcześniej wymienione tabele następnie kliknij prawym przyciskiem myszy i wybierz view data
+
+reszta to już tylko wpisywanie odpowiednich wartości
