@@ -71,9 +71,8 @@ namespace Store.Windows
 
                 DBUtils.addProduct(db, selCat, Product_Name.Text, Double.Parse(Product_Price.Text));
                 if (Product_Name.Text == "")
-                {
                     throw new ArgumentNullException();
-                }
+
                 refresh();
             }
             catch (Exception ex)
@@ -94,6 +93,48 @@ namespace Store.Windows
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Click_Update_product(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Product selProd = (Product)Product_Grid.SelectedItem;
+                selProd.name = Product_Name.Text;
+                selProd.price = Double.Parse(Product_Price.Text);
+                if (Product_Name.Text == "")
+                    throw new ArgumentNullException();
+                else 
+                {
+                    db.SaveChanges();
+                    refresh();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Product_Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                Product selProd = (Product)Product_Grid.SelectedItem;
+                if (selProd == null)
+                {
+                    Product_Name.Text = "";
+                    Product_Price.Text = "";
+                    return;
+                }
+                Product_Name.Text = selProd.name;
+                Product_Price.Text = "" + selProd.price;
+            }
+            catch (Exception ex)
+            {
+                Product_Name.Text = "";
+                Product_Price.Text = "";
             }
         }
     }

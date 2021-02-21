@@ -7,13 +7,14 @@
         mc:Ignorable="d"
         Title="Products" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="Category_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="28,178,424,23" Height="218" Width="340" IsReadOnly="True" SelectionChanged="Category_Grid_SelectionChanged"/>
-        <DataGrid x:Name="Product_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="417,178,35,23" Height="218" Width="340" IsReadOnly="True"/>
+        <DataGrid x:Name="Category_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="22,178,424,23" Height="218" Width="346" IsReadOnly="True" SelectionChanged="Category_Grid_SelectionChanged"/>
+        <DataGrid x:Name="Product_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="417,178,29,23" Height="218" Width="346" IsReadOnly="True" SelectionChanged="Product_Grid_SelectionChanged"/>
         <Button Content="Add product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Margin="417,102,263,271" Click="Click_Add_product"/>
         <TextBox x:Name="Product_Name" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="248,74,424,322" Width="120"/>
         <TextBox x:Name="Product_Price" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="248,125,424,271" Height="23" Width="120"/>
         <Label Content="Name" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="203,74,544,322" Height="23" Width="45"/>
         <Label Content="Price" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="203,125,544,271" Height="23" Width="45"/>
         <Button Content="Delete product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Margin="534,102,146,271" Click="Click_Delete_product"/>
+        <Button Content="Update product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Margin="651,102,29,271" Click="Click_Update_product"/>
     </Grid>
 </Window>
