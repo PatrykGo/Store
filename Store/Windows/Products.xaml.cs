@@ -1,4 +1,4 @@
-﻿using Store.Windows;
+﻿using Store.StoreModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,25 +11,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Store
+namespace Store.Windows
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interakcji dla klasy Products.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Products : Window
     {
-        public MainWindow()
+        StoreDBEntities db = new StoreDBEntities();
+        public Products()
         {
             InitializeComponent();
-        }
-
-        private void Click_Products(object sender, RoutedEventArgs e)
-        {
-            Products wp = new Products();
-            wp.ShowDialog();
         }
     }
 }
