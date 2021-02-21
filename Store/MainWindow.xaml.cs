@@ -31,5 +31,11 @@ namespace Store
             Products wp = new Products();
             wp.ShowDialog();
         }
+
+        private void Click_Orders(object sender, RoutedEventArgs e)
+        {
+            Orders wp = new Orders();
+            wp.ShowDialog();
+        }
     }
 }
