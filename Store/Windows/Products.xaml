@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store.Windows"
         mc:Ignorable="d"
-        Title="Products" Height="450" Width="800">
+        Title="Products" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        
+        <DataGrid x:Name="Category_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="37,164,415,37" Height="218" Width="340" IsReadOnly="True"/>
     </Grid>
 </Window>

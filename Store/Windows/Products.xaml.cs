@@ -25,5 +25,13 @@ namespace Store.Windows
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var categories = from c in db.Categories select c;
+
+            Category_Grid.ItemsSource = categories.ToList();
+            Category_Grid.Columns[2].Visibility = Visibility.Collapsed;
+        }
     }
 }
