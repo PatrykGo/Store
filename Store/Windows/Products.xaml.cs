@@ -33,5 +33,53 @@ namespace Store.Windows
             Category_Grid.ItemsSource = categories.ToList();
             Category_Grid.Columns[2].Visibility = Visibility.Collapsed;
         }
+
+        private void Category_Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            refresh();
+        }
+
+        void refresh()
+        {
+            try
+            {
+                Category selCat = (Category)Category_Grid.SelectedItem;
+
+                var products = from p in db.Products
+                               where p.Category_Id == selCat.Category_Id
+                               select p;
+
+                Product_Grid.ItemsSource = products.ToList();
+
+                Product_Grid.Columns[2].Visibility = Visibility.Collapsed;
+                Product_Grid.Columns[4].Visibility = Visibility.Collapsed;
+                Product_Grid.Columns[5].Visibility = Visibility.Collapsed; 
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Click_Add_product(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Category selCat = (Category)Category_Grid.SelectedItem;
+                if (selCat == null)
+                    return;
+
+                DBUtils.addProduct(db, selCat, Product_Name.Text, Double.Parse(Product_Price.Text));
+                if (Product_Name.Text == "")
+                {
+                    throw new ArgumentNullException();
+                }
+                refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

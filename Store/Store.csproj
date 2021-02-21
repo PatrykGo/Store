@@ -94,6 +94,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StoreModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Windows\DBUtils.cs" />
     <Compile Include="Windows\Products.xaml.cs">
       <DependentUpon>Products.xaml</DependentUpon>
     </Compile>
