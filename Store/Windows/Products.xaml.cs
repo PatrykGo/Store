@@ -81,5 +81,20 @@ namespace Store.Windows
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Click_Delete_product(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Product selProd = (Product)Product_Grid.SelectedItem;
+                db.Products.Remove(selProd);
+                db.SaveChanges();
+                refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -14,5 +14,6 @@
         <TextBox x:Name="Product_Price" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="248,125,424,271" Height="23" Width="120"/>
         <Label Content="Name" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="203,74,544,322" Height="23" Width="45"/>
         <Label Content="Price" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="203,125,544,271" Height="23" Width="45"/>
+        <Button Content="Delete product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Margin="534,102,146,271" Click="Click_Delete_product"/>
     </Grid>
 </Window>
