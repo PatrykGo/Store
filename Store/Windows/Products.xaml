@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store.Windows"
         mc:Ignorable="d"
-        Title="Products" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Products" Height="768" Width="1024" Loaded="Window_Loaded">
     <Grid>
         <DataGrid x:Name="Category_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="22,178,424,23" Height="218" Width="346" IsReadOnly="True" SelectionChanged="Category_Grid_SelectionChanged"/>
         <DataGrid x:Name="Product_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="417,178,29,23" Height="218" Width="346" IsReadOnly="True" SelectionChanged="Product_Grid_SelectionChanged"/>

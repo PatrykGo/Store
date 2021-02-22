@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="768" Width="1024">
     <Grid>
         <Button Content="Products"  HorizontalAlignment="Center"  VerticalAlignment="Center" Width="204" Height="64" Margin="294,240,294,115" BorderThickness="0" Click="Click_Products"/>
         <Button Content="Orders" HorizontalAlignment="Center" VerticalAlignment="Center" Width="204" Height="64" Margin="294,122,294,233" BorderThickness="0" Click="Click_Orders"/>

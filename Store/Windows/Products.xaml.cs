@@ -36,10 +36,10 @@ namespace Store.Windows
 
         private void Category_Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            refresh();
+            Refresh_Products();
         }
 
-        void refresh()
+        void Refresh_Products()
         {
             try
             {
@@ -73,7 +73,7 @@ namespace Store.Windows
                 if (Product_Name.Text == "")
                     throw new ArgumentNullException();
 
-                refresh();
+                Refresh_Products();
             }
             catch (Exception ex)
             {
@@ -88,7 +88,7 @@ namespace Store.Windows
                 Product selProd = (Product)Product_Grid.SelectedItem;
                 db.Products.Remove(selProd);
                 db.SaveChanges();
-                refresh();
+                Refresh_Products();
             }
             catch (Exception ex)
             {
@@ -108,7 +108,7 @@ namespace Store.Windows
                 else 
                 {
                     db.SaveChanges();
-                    refresh();
+                    Refresh_Products();
                 }
             }
             catch (Exception ex)
