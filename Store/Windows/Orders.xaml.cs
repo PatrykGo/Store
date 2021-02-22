@@ -123,5 +123,21 @@ namespace Store.Windows
             }
 
         }
+
+        private void Click_Delete_product(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                PurchaseData purchaseData = (PurchaseData)Purchase_Grid.SelectedItem;
+
+                Purchase p = db.Purchases.FirstOrDefault(x => x.Purchase_Id == purchaseData.Purchase_Id);
+                db.Purchases.Remove(p);
+                db.SaveChanges();
+                Refresh_Purchases();
+            }
+            catch (Exception ex) { }
+
+
+        }
     }
 }

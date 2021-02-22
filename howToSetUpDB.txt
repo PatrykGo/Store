@@ -1,16 +1,17 @@
 tworzenie bazy danych do projektu:
 
-otwórz widok -> SQL Server Object Explorer
 
-rozwiń SQL Server, nastepnie LocalDB i najedź na folder Database
+proszę otworzyć widok -> SQL Server Object Explorer
 
-kliknij prawym przyciskiem myszki na folder i wybierz add new database
+następnie rozwinąć SQL Server, nastepnie LocalDB i najechać na folder Database
 
-nazwij baze StoreDB i utwórz baze danych
+kliknąć prawym przyciskiem myszki na folder i wybierz add new database
 
-nastepnie rozwiń folder database (jeżeli sam się nie rozwinął) i najedź na naszą baze danych StoreDB
+nazwać baze "StoreDB" i utwórz baze danych
 
-kliknij prawym przyciskiem myszki i wybierz new query na stępnie przekopiuj ponirzszy tekst:
+nastepnie rozwinąć folder database (jeżeli sam się nie rozwinął) i najechać na baze danych StoreDB
+
+kliknąć prawym przyciskiem myszki i wybrać new query następnie przekopiować ponirzszy tekst:
 
 
 
@@ -54,10 +55,32 @@ GO
 
 
 
-następnie w górnym lewym rogu uruchom execute (zielony trójkąt)
+następnie w górnym lewym rogu uruchomić execute (zielony trójkąt)
 
 zostało już tylko dodanie wartości w tabeli Customer i Category
 
-aby to zrobić otwórz folder tables i najedź na wcześniej wymienione tabele następnie kliknij prawym przyciskiem myszy i wybierz view data
+aby to zrobić należy ponownie użyć new Query
 
-reszta to już tylko wpisywanie odpowiednich wartości
+
+
+
+
+INSERT INTO Category
+VALUES
+	('game'),
+	('board game'),
+	('book'),
+	('film'),
+	('music');
+
+INSERT INTO Customer
+VALUES
+	('Paweł', 'Kwilc'),
+	('Sylwester', 'Rybczak'),
+	('Marcin', 'Wirtuz'),
+	('Agnieszka', 'Bajło'),
+	('Katarzyna', 'Sasińska');
+
+
+
+
