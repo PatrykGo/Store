@@ -95,12 +95,33 @@ namespace Store.Windows
 
                 Purchase_Grid.ItemsSource = customer_purchases.ToList();
             }
-            catch (Exception ex) { }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Customer_Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Refresh_Purchases();
+        }
+
+        private void Click_Add_product(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Customer selCustomer = (Customer)Customer_Grid.SelectedItem;
+                Product selProd = (Product)Product_Grid.SelectedItem;
+
+                DBUtils.addPurchase(db, selCustomer, selProd);
+
+                Refresh_Purchases();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

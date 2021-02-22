@@ -15,5 +15,6 @@
         <Label Content="Products" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="482,90,464,624" Height="23" Width="70"/>
         <DataGrid x:Name="Purchase_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,474,380,28" Height="235" Width="576" IsReadOnly="True"/>
         <Label Content="Purchases" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="313,446,633,268" Height="23" Width="70"/>
+        <Button Content="Add product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Margin="692,474,212,217" Click="Click_Add_product"/>
     </Grid>
 </Window>

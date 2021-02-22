@@ -30,5 +30,30 @@ namespace Store.Windows
             }
             return true;
         }
+
+        /// <summary>
+        /// Dodawanie zamównienia do bazy
+        /// </summary>
+        public static bool addPurchase(StoreDBEntities db, Customer c, Product p)
+        {
+            if (c == null || p == null)
+                return false;
+
+            try
+            {
+
+                Purchase pr = new Purchase();
+                pr.Customer_Id = c.Customer_Id;
+                pr.Product_Id = p.Product_Id;
+                pr.data = DateTime.Now;
+                db.Purchases.Add(pr);
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
