@@ -7,15 +7,18 @@
         mc:Ignorable="d"
         Title="Orders" Height="768" Width="1024" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="Customer_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,118,701,327" Height="292" Width="255" IsReadOnly="True" SelectionChanged="Customer_Grid_SelectionChanged"/>
-        <Label Content="Customers" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="149,90,797,624" Height="23" Width="70"/>
-        <DataGrid x:Name="Category_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="692,118,68,327" Height="292" Width="256" IsReadOnly="True" SelectionChanged="Category_Grid_SelectionChanged"/>
-        <Label Content="Categories" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="788,90,158,624" Height="23" Width="70"/>
-        <DataGrid x:Name="Product_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="380,118,380,327" Height="292" Width="256" IsReadOnly="True"/>
-        <Label Content="Products" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="482,90,464,624" Height="23" Width="70"/>
-        <DataGrid x:Name="Purchase_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,474,380,28" Height="235" Width="576" IsReadOnly="True"/>
-        <Label Content="Purchases" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="313,446,633,268" Height="23" Width="70"/>
-        <Button Content="Add product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Margin="692,474,212,217" Click="Click_Add_product"/>
-        <Button Content="Delete product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Margin="692,542,212,149" Click="Click_Delete_product"/>
+        <DataGrid x:Name="Customer_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,118,701,327" Height="292" Width="255" Background="#66cc66" IsReadOnly="True" SelectionChanged="Customer_Grid_SelectionChanged"/>
+        <Label Content="Customers" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="149,90,797,624" Height="23" Width="70" Foreground="#d2fdbb"/>
+        <DataGrid x:Name="Category_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="692,118,68,327" Height="292" Width="256" Background="#66cc66" IsReadOnly="True" SelectionChanged="Category_Grid_SelectionChanged"/>
+        <Label Content="Categories" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="788,90,158,624" Height="23" Width="70" Foreground="#d2fdbb"/>
+        <DataGrid x:Name="Product_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="380,118,380,327" Height="292" Width="256" Background="#66cc66" IsReadOnly="True"/>
+        <Label Content="Products" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="482,90,464,624" Height="23" Width="70" Foreground="#d2fdbb"/>
+        <DataGrid x:Name="Purchase_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,474,380,28" Height="235" Width="576" Background="#66cc66" IsReadOnly="True"/>
+        <Label Content="Purchases" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="313,446,633,268" Height="23" Width="70" Foreground="#d2fdbb"/>
+        <Button Content="Add purchase" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Background="#66cc66" Foreground="#d2fdbb" Margin="692,474,212,217" Click="Click_Add_product"/>
+        <Button Content="Delete purchase" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Background="#66cc66" Foreground="#d2fdbb" Margin="692,542,212,149" Click="Click_Delete_product"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/Store_background.png" Stretch="Fill"/>
+        </Grid.Background>
     </Grid>
 </Window>
