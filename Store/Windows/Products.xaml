@@ -9,13 +9,15 @@
     <Grid>
         <DataGrid x:Name="Category_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="22,178,424,23" Height="218" Width="346" Background="#66cc66" IsReadOnly="True" SelectionChanged="Category_Grid_SelectionChanged"/>
         <DataGrid x:Name="Product_Grid"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="417,178,29,23" Height="218" Width="346" Background="#66cc66" IsReadOnly="True" SelectionChanged="Product_Grid_SelectionChanged"/>
-        <Button Content="Add product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Background="#66cc66" Foreground="#d2fdbb" Margin="417,102,263,271" Click="Click_Add_product"/>
-        <TextBox x:Name="Product_Name" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Margin="248,74,424,322" Width="120" Background="#66cc66" Foreground="#d2fdbb"/>
-        <TextBox x:Name="Product_Price" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="248,125,424,271" Height="23" Width="120" Background="#66cc66" Foreground="#d2fdbb"/>
-        <Label Content="Name" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="203,74,544,322" Height="23" Width="45" Foreground="#d2fdbb"/>
-        <Label Content="Price" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="203,125,544,271" Height="23" Width="45" Foreground="#d2fdbb"/>
-        <Button Content="Delete product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Background="#66cc66" Foreground="#d2fdbb" Margin="534,102,146,271" Click="Click_Delete_product"/>
-        <Button Content="Update product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Background="#66cc66" Foreground="#d2fdbb" Margin="651,102,29,271" Click="Click_Update_product"/>
+        <Button Content="Add product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Background="#66cc66" Foreground="#d2fdbb" Margin="529,226,375,465" Click="Click_Add_product"/>
+        <TextBox x:Name="Product_Name" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" Margin="360,198,536,515" Width="120" Background="#66cc66" Foreground="#d2fdbb"/>
+        <TextBox x:Name="Product_Price" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="360,250,536,465" Height="22" Width="120" Background="#66cc66" Foreground="#d2fdbb"/>
+        <Label Content="Name" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="315,198,656,515" Height="24" Width="45" Foreground="#d2fdbb"/>
+        <Label Content="Price" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="315,250,656,465" Height="22" Width="45" Foreground="#d2fdbb"/>
+        <Button Content="Delete product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Background="#66cc66" Foreground="#d2fdbb" Margin="646,226,258,465" Click="Click_Delete_product"/>
+        <Button Content="Update product" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Height="46" Background="#66cc66" Foreground="#d2fdbb" Margin="763,226,141,465" Click="Click_Update_product"/>
+        <Label Content="Categories" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="274,309,672,405" Height="23" Width="70" Foreground="#d2fdbb"/>
+        <Label Content="Products" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="670,309,276,405" Height="23" Width="70" Foreground="#d2fdbb"/>
         <Grid.Background>
             <ImageBrush ImageSource="/images/Store_background.png" Stretch="Fill"/>
         </Grid.Background>
